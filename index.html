@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>$TRUMPBOB - The Wettest Meme on Chain</title>
+    <title>TRUMPBOB</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.1/lucide.min.js"></script>
@@ -34,11 +34,21 @@
                         'float': 'float 6s ease-in-out infinite',
                         'float-delayed': 'float 6s ease-in-out 3s infinite',
                         'bounce-slow': 'bounce 3s infinite',
+                        'glow': 'glow 2s ease-in-out infinite alternate',
+                        'breathe': 'breathe 3s ease-in-out infinite',
                     },
                     keyframes: {
                         float: {
                             '0%, 100%': { transform: 'translateY(0)' },
                             '50%': { transform: 'translateY(-20px)' },
+                        },
+                        glow: {
+                            '0%': { filter: 'drop-shadow(0 0 2px rgba(255, 215, 0, 0.4)) brightness(1)' },
+                            '100%': { filter: 'drop-shadow(0 0 15px rgba(255, 215, 0, 0.9)) brightness(1.1)' }
+                        },
+                        breathe: {
+                            '0%, 100%': { transform: 'scale(1)', filter: 'brightness(1)' },
+                            '50%': { transform: 'scale(1.05)', filter: 'brightness(1.1) drop-shadow(0 0 8px rgba(255, 215, 0, 0.5))' }
                         }
                     }
                 }
@@ -160,7 +170,7 @@
         <div class="container mx-auto px-4 z-10 flex-grow flex flex-col items-center justify-center text-center">
             
             <div class="mb-8 transform -rotate-2 hover:scale-105 transition-transform duration-300">
-                <img src="images/ticker.png" alt="$TRUMPBOB Ticker" class="max-w-full h-auto md:h-32 object-contain drop-shadow-2xl">
+                <img src="images/ticker.png" alt="$TRUMPBOB Ticker" class="max-w-full h-auto md:h-32 object-contain drop-shadow-2xl animate-breathe">
             </div>
 
             <div class="relative w-full max-w-lg flex justify-center items-end mb-8 z-20 animate-float">
